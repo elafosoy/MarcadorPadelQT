@@ -9,6 +9,8 @@ struct Pantalla {
   int puntosB = 0;
   int juegosA = 0;
   int juegosB = 0;
+  int setsA = 0;
+  int setsB = 0;
 };
 
 class Marcador {
@@ -26,9 +28,6 @@ class Marcador {
 
   void restaA();
   void restaB();
-
-  void totalA();
-  void totalB();
 
   void refreshResults(Pantalla *pantalla);
 };

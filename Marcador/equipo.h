@@ -3,12 +3,17 @@
 
 class Equipo {
   int m_juegos;
+  int m_sets;
 
  public:
   Equipo();
 
-  void sumaJuego();
+  void sumaJuego(Equipo *other);
   int totalJuegosGanados();
+  int totalSetsGanados();
+
+  void sumaSet();
+  void clearJuegos();
 };
 
 #endif  // EQUIPO_H

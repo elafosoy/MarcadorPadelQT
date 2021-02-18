@@ -4,6 +4,7 @@
 
 class Juego {
   Equipo *m_equipo;
+  Equipo *m_otherEquipo;
   Juego *m_otherJuego;
   int m_puntos;
   int m_otherPuntos;
@@ -17,6 +18,7 @@ class Juego {
   int puntos();
 
   void clear();
+  void setOtherEquipo(Equipo *otherEquipo);
 };
 
 #endif  // JUEGO_H

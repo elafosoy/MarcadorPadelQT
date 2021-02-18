@@ -2,6 +2,8 @@
 
 void Juego::setOtherJuego(Juego *otherJuego) { m_otherJuego = otherJuego; }
 
+void Juego::setOtherEquipo(Equipo *otherEquipo) { m_otherEquipo = otherEquipo; }
+
 Juego::Juego(Equipo *equipo) {
   m_equipo = equipo;
   m_puntos = 0;
@@ -25,16 +27,16 @@ int Juego::puntos() {
     m_puntos = 0;
 
   if (m_puntos > 40 && m_otherPuntos < 40) {
-    m_equipo->sumaJuego();
+    m_equipo->sumaJuego(m_otherEquipo);
     clear();
     m_otherJuego->clear();
   } else if (m_puntos < 40 && m_otherPuntos > 40) {
-    m_equipo->sumaJuego();
+    m_equipo->sumaJuego(m_otherEquipo);
     clear();
     m_otherJuego->clear();
   } else if ((m_puntos > 55) && ((m_puntos - m_otherPuntos > 15))) {
     // Cuando se ha lleado a 4 y hay que ganar de 2 puntos
-    m_equipo->sumaJuego();
+    m_equipo->sumaJuego(m_otherEquipo);
     clear();
     m_otherJuego->clear();
   }

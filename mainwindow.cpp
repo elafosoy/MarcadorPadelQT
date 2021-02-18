@@ -59,4 +59,7 @@ void MainWindow::refreshScreen() {
 
   ui->lcdJuegosA->display(pantalla.juegosA);
   ui->lcdJuegosB->display(pantalla.juegosB);
+
+  ui->LabelSetsA->setNum(pantalla.setsA);
+  ui->LabelSetsB->setNum(pantalla.setsB);
 }
