@@ -15,7 +15,11 @@ void Juego::suma() {
 }
 
 void Juego::resta() {
-  m_puntos -= 15;
+  if (m_puntos == 40)
+    m_puntos -= 10;
+  else
+    m_puntos -= 15;
+
   m_otherPuntos = m_otherJuego->puntos();
 }
 
