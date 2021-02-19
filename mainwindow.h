@@ -1,7 +1,9 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
+#include <QElapsedTimer>
 #include <QMainWindow>
+#include <QTimer>
 #include "Marcador/marcador.h"
 
 QT_BEGIN_NAMESPACE
@@ -15,6 +17,9 @@ class MainWindow : public QMainWindow {
 
   Marcador m_marcador;
 
+  QTimer m_time;
+  QElapsedTimer m_elapsedTime;
+
  public:
   MainWindow(QWidget *parent = nullptr);
   ~MainWindow();
@@ -27,6 +32,7 @@ class MainWindow : public QMainWindow {
   void slotRestaPuntoEquipoB();
 
   void refreshScreen();
+  void slotRefresTime();
 
  private:
   Ui::MainWindow *ui;

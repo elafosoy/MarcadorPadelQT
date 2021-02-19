@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>media/ball.ico</file>
+        <file>media/pista.png</file>
+    </qresource>
+</RCC>
